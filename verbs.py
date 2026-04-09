@@ -122,6 +122,18 @@ def remove_macrons(text):
 st.set_page_config(page_title="Latin Verb Master", page_icon="🏛️")
 st.title("🏛️ Latin Verb Master")
 
+# --- SCORE TRACKER INITIALIZATION ---
+if "score" not in st.session_state:
+    st.session_state.score = 0
+if "attempts" not in st.session_state:
+    st.session_state.attempts = 0
+
+# --- SCORE DISPLAY ---
+col1, col2 = st.columns(2)
+col1.metric("Correct Answers ✅", st.session_state.score)
+col2.metric("Total Attempts 📝", st.session_state.attempts)
+st.divider()
+
 with st.sidebar:
     st.header("Quiz Settings")
     verb_choice = st.selectbox("Select Verb:", ["All"] + list(verbs_db.keys()))
@@ -134,6 +146,14 @@ with st.sidebar:
             del st.session_state.current_q
         if "last_result" in st.session_state:
             del st.session_state.last_result
+        st.rerun()
+        
+    st.divider()
+    
+    # Optional button to reset the score
+    if st.button("Reset Score"):
+        st.session_state.score = 0
+        st.session_state.attempts = 0
         st.rerun()
 
 # --- PREVIOUS RESULT DISPLAY ---
@@ -202,6 +222,11 @@ if "current_q" in st.session_state:
 
     if submit_button:
         is_correct = remove_macrons(user_input) == remove_macrons(q['answer'])
+
+        # --- UPDATE SCORES ---
+        st.session_state.attempts += 1
+        if is_correct:
+            st.session_state.score += 1
 
         # Save the context of the question we just finished
         st.session_state.last_result = {
