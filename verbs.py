@@ -106,6 +106,110 @@ verbs_db = {
             "future active": "monitūrus esse",
             "future passive": "monitum īrī"
         }
+    },
+"laudāre": {
+        "indicative": {
+            "present": {
+                "active": {"singular": {1: "laudō", 2: "laudās", 3: "laudat"},
+                           "plural": {1: "laudāmus", 2: "laudātis", 3: "laudant"}},
+                "passive": {"singular": {1: "laudor", 2: "laudāris", 3: "laudātur"},
+                            "plural": {1: "laudāmur", 2: "laudāminī", 3: "laudantur"}}
+            },
+            "imperfect": {
+                "active": {"singular": {1: "laudābam", 2: "laudābās", 3: "laudābat"},
+                           "plural": {1: "laudābāmus", 2: "laudābātis", 3: "laudābant"}},
+                "passive": {"singular": {1: "laudābar", 2: "laudābāris", 3: "laudābātur"},
+                            "plural": {1: "laudābāmur", 2: "laudābāminī", 3: "laudābantur"}}
+            },
+            "future": {
+                "active": {"singular": {1: "laudābō", 2: "laudābis", 3: "laudābit"},
+                           "plural": {1: "laudābimus", 2: "laudābitis", 3: "laudābunt"}},
+                "passive": {"singular": {1: "laudābor", 2: "laudāberis", 3: "laudābitur"},
+                            "plural": {1: "laudābimur", 2: "laudābiminī", 3: "laudābuntur"}}
+            },
+            "perfect": {
+                "active": {"singular": {1: "laudāvī", 2: "laudāvistī", 3: "laudāvit"},
+                           "plural": {1: "laudāvimus", 2: "laudāvistis", 3: "laudāvērunt"}},
+                "passive": {"singular": {1: "laudātus sum", 2: "laudātus es", 3: "laudātus est"},
+                            "plural": {1: "laudātī sumus", 2: "laudātī estis", 3: "laudātī sunt"}}
+            },
+            "future perfect": {
+                "active": {"singular": {1: "laudāverō", 2: "laudāveris", 3: "laudāverit"},
+                           "plural": {1: "laudāverimus", 2: "laudāveritis", 3: "laudāverint"}},
+                "passive": {"singular": {1: "laudātus erō", 2: "laudātus eris", 3: "laudātus erit"},
+                            "plural": {1: "laudātī erimus", 2: "laudātī eritis", 3: "laudātī erunt"}}
+            }
+        },
+        "imperative": {
+            "present": {
+                "active": {"singular": {2: "laudā"}, "plural": {2: "laudāte"}},
+                "passive": {"singular": {2: "laudāre"}, "plural": {2: "laudāminī"}}
+            },
+            "future": {
+                "active": {"singular": {2: "laudātō", 3: "laudātō"}, "plural": {2: "laudātōte", 3: "laudantō"}},
+                "passive": {"singular": {2: "laudātor", 3: "laudātor"}, "plural": {3: "laudantor"}}
+            }
+        },
+        "infinitives": {
+            "present active": "laudāre",
+            "present passive": "laudārī",
+            "perfect active": "laudāvisse",
+            "perfect passive": "laudātus esse",
+            "future active": "laudātūrus esse",
+            "future passive": "laudātum īrī"
+        }
+    },
+    "vidēre": {
+        "indicative": {
+            "present": {
+                "active": {"singular": {1: "videō", 2: "vidēs", 3: "videt"},
+                           "plural": {1: "vidēmus", 2: "vidētis", 3: "vident"}},
+                "passive": {"singular": {1: "videor", 2: "vidēris", 3: "vidētur"},
+                            "plural": {1: "vidēmur", 2: "vidēminī", 3: "videntur"}}
+            },
+            "imperfect": {
+                "active": {"singular": {1: "vidēbam", 2: "vidēbās", 3: "vidēbat"},
+                           "plural": {1: "vidēbāmus", 2: "vidēbātis", 3: "vidēbant"}},
+                "passive": {"singular": {1: "vidēbar", 2: "vidēbāris", 3: "vidēbātur"},
+                            "plural": {1: "vidēbāmur", 2: "vidēbāminī", 3: "vidēbantur"}}
+            },
+            "future": {
+                "active": {"singular": {1: "vidēbō", 2: "vidēbis", 3: "vidēbit"},
+                           "plural": {1: "vidēbimus", 2: "vidēbitis", 3: "vidēbunt"}},
+                "passive": {"singular": {1: "vidēbor", 2: "vidēberis", 3: "vidēbitur"},
+                            "plural": {1: "vidēbimur", 2: "vidēbiminī", 3: "vidēbuntur"}}
+            },
+            "perfect": {
+                "active": {"singular": {1: "vīdī", 2: "vīdistī", 3: "vīdit"},
+                           "plural": {1: "vīdimus", 2: "vīdistis", 3: "vīdērunt"}},
+                "passive": {"singular": {1: "vīsus sum", 2: "vīsus es", 3: "vīsus est"},
+                            "plural": {1: "vīsī sumus", 2: "vīsī estis", 3: "vīsī sunt"}}
+            },
+            "future perfect": {
+                "active": {"singular": {1: "vīderō", 2: "vīderis", 3: "vīderit"},
+                           "plural": {1: "vīderimus", 2: "vīderitis", 3: "vīderint"}},
+                "passive": {"singular": {1: "vīsus erō", 2: "vīsus eris", 3: "vīsus erit"},
+                            "plural": {1: "vīsī erimus", 2: "vīsī eritis", 3: "vīsī erunt"}}
+            }
+        },
+        "imperative": {
+            "present": {
+                "active": {"singular": {2: "vidē"}, "plural": {2: "vidēte"}},
+                "passive": {"singular": {2: "vidēre"}, "plural": {2: "vidēminī"}}
+            },
+            "future": {
+                "active": {"singular": {2: "vidētō", 3: "vidētō"}, "plural": {2: "vidētōte", 3: "videntō"}},
+                "passive": {"singular": {2: "vidētor", 3: "vidētor"}, "plural": {3: "videntor"}}
+            }
+        },
+        "infinitives": {
+            "present active": "vidēre",
+            "present passive": "vidērī",
+            "perfect active": "vīdisse",
+            "perfect passive": "vīsus esse",
+            "future active": "vīsūrus esse",
+            "future passive": "vīsum īrī"
+        }
     }
 }
 
@@ -147,9 +251,9 @@ with st.sidebar:
         if "last_result" in st.session_state:
             del st.session_state.last_result
         st.rerun()
-        
+
     st.divider()
-    
+
     # Optional button to reset the score
     if st.button("Reset Score"):
         st.session_state.score = 0
