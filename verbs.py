@@ -1063,11 +1063,23 @@ if "score" not in st.session_state:
     st.session_state.score = 0
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
+if "streak" not in st.session_state:
+    st.session_state.streak = 0
+if "max_streak" not in st.session_state:
+    st.session_state.max_streak = 0
+
+# --- ACCURACY CALCULATION ---
+if st.session_state.attempts > 0:
+    accuracy = (st.session_state.score / st.session_state.attempts) * 100
+else:
+    accuracy = 0.0
 
 # --- SCORE DISPLAY ---
-col1, col2 = st.columns(2)
-col1.metric("Correct Answers ✅", st.session_state.score)
-col2.metric("Total Attempts 📝", st.session_state.attempts)
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("Correct ✅", st.session_state.score)
+col2.metric("Attempts 📝", st.session_state.attempts)
+col3.metric("Accuracy 🎯", f"{accuracy:.1f}%")
+col4.metric("Streak 🔥", f"{st.session_state.streak} (Max: {st.session_state.max_streak})")
 st.divider()
 
 with st.sidebar:
@@ -1082,14 +1094,20 @@ with st.sidebar:
             del st.session_state.current_q
         if "last_result" in st.session_state:
             del st.session_state.last_result
+        # Skipping resets the streak
+        st.session_state.streak = 0
         st.rerun()
 
     st.divider()
 
-    # Optional button to reset the score
+    # Reset button clears all stats including streaks
     if st.button("Reset Score"):
         st.session_state.score = 0
         st.session_state.attempts = 0
+        st.session_state.streak = 0
+        st.session_state.max_streak = 0
+        if "last_result" in st.session_state:
+            del st.session_state.last_result
         st.rerun()
 
 # --- PREVIOUS RESULT DISPLAY ---
@@ -1159,10 +1177,18 @@ if "current_q" in st.session_state:
     if submit_button:
         is_correct = remove_macrons(user_input) == remove_macrons(q['answer'])
 
-        # --- UPDATE SCORES ---
+        # --- UPDATE SCORES & STREAKS ---
         st.session_state.attempts += 1
+        
         if is_correct:
             st.session_state.score += 1
+            st.session_state.streak += 1
+            # Update max streak if the current streak surpasses it
+            if st.session_state.streak > st.session_state.max_streak:
+                st.session_state.max_streak = st.session_state.streak
+        else:
+            # Reset streak on incorrect answer
+            st.session_state.streak = 0
 
         # Save the context of the question we just finished
         st.session_state.last_result = {
@@ -1174,4 +1200,3 @@ if "current_q" in st.session_state:
         # Move to next question immediately
         del st.session_state.current_q
         st.rerun()
-        
