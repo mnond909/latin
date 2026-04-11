@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 from PIL import Image # Add this line
 
 # Load your custom icon
