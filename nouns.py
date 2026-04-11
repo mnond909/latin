@@ -220,9 +220,10 @@ if "current_q" not in st.session_state:
                 if case == "vocative" and not include_vocative:
                     continue
                 
-                # Build a readable prompt
+                # Build a readable prompt with Nominative AND Genitive Singular
+                genitive_singular = data["singular"]["genitive"]
                 meta_info = f"({data['declension']}, {data['gender'][0]})" # e.g. (1st, F)
-                prompt_text = f"{noun.upper()} {meta_info} — {number.upper()} {case.upper()}"
+                prompt_text = f"{noun.upper()}, {genitive_singular.upper()} {meta_info} — {number.upper()} {case.upper()}"
                 
                 questions.append({
                     "prompt": prompt_text,
