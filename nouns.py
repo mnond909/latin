@@ -1,6 +1,11 @@
 import streamlit as st
-import random
+from PIL import Image # Add this line
 
+# Load your custom icon
+icon_image = Image.open("spqr.png")
+
+# Change page_icon to use your image
+st.set_page_config(page_title="Latin Noun Master", page_icon=icon_image)
 # --- DATA ---
 # Includes at least 2 nouns for each declension-gender pair
 nouns_db = {
