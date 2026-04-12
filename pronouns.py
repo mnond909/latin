@@ -1,8 +1,3 @@
-Here is the complete, adapted Streamlit app for Latin Pronouns. 
-
-I updated the database to categorize pronouns by **Type** (Personal, Demonstrative, Relative, etc.) rather than declension. I also added logic to handle multiple correct answers (e.g., *nostrum* vs. *nostrī* for the genitive of *nōs*) and to safely skip cases that do not exist (like the nominative case for the reflexive pronoun *suī*).
-
-```python
 import streamlit as st
 import random
 from PIL import Image
@@ -248,4 +243,3 @@ if "current_q" in st.session_state:
 
         del st.session_state.current_q
         st.rerun()
-```
