@@ -119,9 +119,59 @@ nouns_db = {
     },
 
     # ==========================================
-    # --- 2ND DECLENSION (10 Masc, 10 Neut) ---
+    # --- 2ND DECLENSION (10 Fem, 10 Masc, 10 Neut) ---
     # ==========================================
-    
+    # 2nd Declension - Feminine (10)
+    "humus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "humus", "genitive": "humī", "dative": "humō", "accusative": "humum", "ablative": "humō", "vocative": "hume"},
+        "plural": {"nominative": "humī", "genitive": "humōrum", "dative": "humīs", "accusative": "humōs", "ablative": "humīs", "vocative": "humī"}
+    },
+    "alvus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "alvus", "genitive": "alvī", "dative": "alvō", "accusative": "alvum", "ablative": "alvō", "vocative": "alve"},
+        "plural": {"nominative": "alvī", "genitive": "alvōrum", "dative": "alvīs", "accusative": "alvōs", "ablative": "alvīs", "vocative": "alvī"}
+    },
+    "vannus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "vannus", "genitive": "vannī", "dative": "vannō", "accusative": "vannum", "ablative": "vannō", "vocative": "vanne"},
+        "plural": {"nominative": "vannī", "genitive": "vannōrum", "dative": "vannīs", "accusative": "vannōs", "ablative": "vannīs", "vocative": "vannī"}
+    },
+    "mālus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "mālus", "genitive": "mālī", "dative": "mālō", "accusative": "mālum", "ablative": "mālō", "vocative": "māle"},
+        "plural": {"nominative": "mālī", "genitive": "mālōrum", "dative": "mālīs", "accusative": "mālōs", "ablative": "mālīs", "vocative": "mālī"}
+    },
+    "pīrus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "pīrus", "genitive": "pīrī", "dative": "pīrō", "accusative": "pīrum", "ablative": "pīrō", "vocative": "pīre"},
+        "plural": {"nominative": "pīrī", "genitive": "pīrōrum", "dative": "pīrīs", "accusative": "pīrōs", "ablative": "pīrīs", "vocative": "pīrī"}
+    },
+    "ulmus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "ulmus", "genitive": "ulmī", "dative": "ulmō", "accusative": "ulmum", "ablative": "ulmō", "vocative": "ulme"},
+        "plural": {"nominative": "ulmī", "genitive": "ulmōrum", "dative": "ulmīs", "accusative": "ulmōs", "ablative": "ulmīs", "vocative": "ulmī"}
+    },
+    "fāgus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "fāgus", "genitive": "fāgī", "dative": "fāgō", "accusative": "fāgum", "ablative": "fāgō", "vocative": "fāge"},
+        "plural": {"nominative": "fāgī", "genitive": "fāgōrum", "dative": "fāgīs", "accusative": "fāgōs", "ablative": "fāgīs", "vocative": "fāgī"}
+    },
+    "fraxinus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "fraxinus", "genitive": "fraxinī", "dative": "fraxinō", "accusative": "fraxinum", "ablative": "fraxinō", "vocative": "fraxine"},
+        "plural": {"nominative": "fraxinī", "genitive": "fraxinōrum", "dative": "fraxinīs", "accusative": "fraxinōs", "ablative": "fraxinīs", "vocative": "fraxinī"}
+    },
+    "platanus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "platanus", "genitive": "platanī", "dative": "platanō", "accusative": "platanum", "ablative": "platanō", "vocative": "platane"},
+        "plural": {"nominative": "platanī", "genitive": "platanōrum", "dative": "platanīs", "accusative": "platanōs", "ablative": "platanīs", "vocative": "platanī"}
+    },
+    "cerasus": {
+        "declension": "2nd", "gender": "Feminine",
+        "singular": {"nominative": "cerasus", "genitive": "cerasī", "dative": "cerasō", "accusative": "cerasum", "ablative": "cerasō", "vocative": "cerase"},
+        "plural": {"nominative": "cerasī", "genitive": "cerasōrum", "dative": "cerasīs", "accusative": "cerasōs", "ablative": "cerasīs", "vocative": "cerasī"}
+    }
     # 2nd Declension - Masculine (10)
     "servus": {
         "declension": "2nd", "gender": "Masculine",
