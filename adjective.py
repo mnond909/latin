@@ -15,6 +15,8 @@ if 'attempts' not in st.session_state:
     st.session_state.attempts = 0
 if 'streak' not in st.session_state:
     st.session_state.streak = 0
+if 'max_streak' not in st.session_state:
+    st.session_state.max_streak = 0
 
 def strip_macrons(text):
     """Removes macrons from vowels for flexible grading."""
@@ -30,16 +32,33 @@ def generate_question():
     # Fetch the genitive singular directly from the database for display
     noun_genitive = nouns_db[noun_lemma]["singular"]["genitive"]
     
+    # Dynamically build the adjective dictionary display based on terminations
+    adj_data = adjectives_db[adj_lemma]
+    terms = adj_data["terminations"]
+    masc_nom = adj_data["masculine"]["singular"]["nominative"]
+    
+    if terms == 3:
+        fem_nom = adj_data["feminine"]["singular"]["nominative"]
+        neut_nom = adj_data["neuter"]["singular"]["nominative"]
+        adj_display = f"{masc_nom}, {fem_nom}, {neut_nom}"
+    elif terms == 2:
+        neut_nom = adj_data["neuter"]["singular"]["nominative"]
+        adj_display = f"{masc_nom}, {neut_nom}"
+    else: # 1 Termination (Requires the genitive to show the stem)
+        masc_gen = adj_data["masculine"]["singular"]["genitive"]
+        adj_display = f"{masc_nom}, {masc_gen}"
+    
     st.session_state.current_q = {
         "noun_lemma": noun_lemma,
         "noun_genitive": noun_genitive,
         "adj_lemma": adj_lemma,
+        "adj_display": adj_display,
         "number": number,
         "case": case,
         "gender": nouns_db[noun_lemma]["gender"],
         "noun_decl": nouns_db[noun_lemma]["declension"],
         "adj_decl": adjectives_db[adj_lemma]["type"],
-        "adj_term": adjectives_db[adj_lemma]["terminations"] # Fetches the termination count
+        "adj_term": terms
     }
 
 def process_answer():
@@ -61,6 +80,11 @@ def process_answer():
     if strip_macrons(u_noun) == strip_macrons(correct_noun) and strip_macrons(u_adj) == strip_macrons(correct_adj):
         st.session_state.score += 1
         st.session_state.streak += 1
+        
+        # Update max streak if the current streak surpasses it
+        if st.session_state.streak > st.session_state.max_streak:
+            st.session_state.max_streak = st.session_state.streak
+            
         st.session_state.feedback_msg = f"✅ **Correct!** The exact form is **{correct_noun} {correct_adj}**."
         st.session_state.feedback_type = "success"
     else:
@@ -99,12 +123,19 @@ win_rate = (st.session_state.score / st.session_state.attempts * 100) if st.sess
 st.sidebar.header("📊 Statistics")
 st.sidebar.metric("Score", f"{st.session_state.score} / {st.session_state.attempts}")
 st.sidebar.metric("Accuracy", f"{win_rate:.1f}%")
-st.sidebar.metric("🔥 Current Streak", st.session_state.streak)
+
+# Display streaks side-by-side using columns for a cleaner look
+streak_col1, streak_col2 = st.sidebar.columns(2)
+with streak_col1:
+    st.metric("🔥 Streak", st.session_state.streak)
+with streak_col2:
+    st.metric("👑 Max", st.session_state.max_streak)
 
 if st.sidebar.button("Reset Stats"):
     st.session_state.score = 0
     st.session_state.attempts = 0
     st.session_state.streak = 0
+    st.session_state.max_streak = 0
     st.session_state.feedback_msg = ""
     generate_question()
 
@@ -117,8 +148,8 @@ display_gender = "Hidden" if hide_gender else q['gender']
 st.subheader("Decline the following pair:")
 # Now displaying the dictionary format: nominative, genitive
 st.markdown(f"**Noun:** {q['noun_lemma']}, {q['noun_genitive']} *({q['noun_decl']} Declension, {display_gender})*")
-# Now displaying the adjective terminations
-st.markdown(f"**Adjective:** {q['adj_lemma']} *({q['adj_decl']} Declension, {q['adj_term']} Terminations)*")
+# Now displaying the proper dictionary format based on terminations!
+st.markdown(f"**Adjective:** {q['adj_display']} *({q['adj_decl']} Declension, {q['adj_term']} Terminations)*")
 st.markdown(f"**Target Form:** {q['case'].capitalize()} {q['number'].capitalize()}")
 
 st.write("---")
