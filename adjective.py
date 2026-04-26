@@ -38,7 +38,8 @@ def generate_question():
         "case": case,
         "gender": nouns_db[noun_lemma]["gender"],
         "noun_decl": nouns_db[noun_lemma]["declension"],
-        "adj_decl": adjectives_db[adj_lemma]["type"]
+        "adj_decl": adjectives_db[adj_lemma]["type"],
+        "adj_term": adjectives_db[adj_lemma]["terminations"] # Fetches the termination count
     }
 
 def process_answer():
@@ -116,7 +117,8 @@ display_gender = "Hidden" if hide_gender else q['gender']
 st.subheader("Decline the following pair:")
 # Now displaying the dictionary format: nominative, genitive
 st.markdown(f"**Noun:** {q['noun_lemma']}, {q['noun_genitive']} *({q['noun_decl']} Declension, {display_gender})*")
-st.markdown(f"**Adjective:** {q['adj_lemma']} *({q['adj_decl']} Declension)*")
+# Now displaying the adjective terminations
+st.markdown(f"**Adjective:** {q['adj_lemma']} *({q['adj_decl']} Declension, {q['adj_term']} Terminations)*")
 st.markdown(f"**Target Form:** {q['case'].capitalize()} {q['number'].capitalize()}")
 
 st.write("---")
