@@ -626,12 +626,12 @@ nouns_db = {
 
 adjectives_db = {
     # ==========================================
-    # --- 1ST & 2ND DECLENSION ADJECTIVES ---
+    # --- 1ST & 2ND DECLENSION ADJECTIVES (15) ---
     # ==========================================
     
-    # Standard -us, -a, -um
+    # --- GROUP 1: Standard -us, -a, -um (5 Adjectives) ---
     "bonus": {
-        "type": "1st/2nd",
+        "type": "1st/2nd", "terminations": 3,
         "masculine": {
             "singular": {"nominative": "bonus", "genitive": "bonī", "dative": "bonō", "accusative": "bonum", "ablative": "bonō", "vocative": "bone"},
             "plural": {"nominative": "bonī", "genitive": "bonōrum", "dative": "bonīs", "accusative": "bonōs", "ablative": "bonīs", "vocative": "bonī"}
@@ -645,10 +645,70 @@ adjectives_db = {
             "plural": {"nominative": "bona", "genitive": "bonōrum", "dative": "bonīs", "accusative": "bona", "ablative": "bonīs", "vocative": "bona"}
         }
     },
-    
-    # Ends in -er, drops the 'e' (-er, -ra, -rum)
+    "magnus": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "magnus", "genitive": "magnī", "dative": "magnō", "accusative": "magnum", "ablative": "magnō", "vocative": "magne"},
+            "plural": {"nominative": "magnī", "genitive": "magnōrum", "dative": "magnīs", "accusative": "magnōs", "ablative": "magnīs", "vocative": "magnī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "magna", "genitive": "magnae", "dative": "magnae", "accusative": "magnam", "ablative": "magnā", "vocative": "magna"},
+            "plural": {"nominative": "magnae", "genitive": "magnārum", "dative": "magnīs", "accusative": "magnās", "ablative": "magnīs", "vocative": "magnae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "magnum", "genitive": "magnī", "dative": "magnō", "accusative": "magnum", "ablative": "magnō", "vocative": "magnum"},
+            "plural": {"nominative": "magna", "genitive": "magnōrum", "dative": "magnīs", "accusative": "magna", "ablative": "magnīs", "vocative": "magna"}
+        }
+    },
+    "altus": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "altus", "genitive": "altī", "dative": "altō", "accusative": "altum", "ablative": "altō", "vocative": "alte"},
+            "plural": {"nominative": "altī", "genitive": "altōrum", "dative": "altīs", "accusative": "altōs", "ablative": "altīs", "vocative": "altī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "alta", "genitive": "altae", "dative": "altae", "accusative": "altam", "ablative": "altā", "vocative": "alta"},
+            "plural": {"nominative": "altae", "genitive": "altārum", "dative": "altīs", "accusative": "altās", "ablative": "altīs", "vocative": "altae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "altum", "genitive": "altī", "dative": "altō", "accusative": "altum", "ablative": "altō", "vocative": "altum"},
+            "plural": {"nominative": "alta", "genitive": "altōrum", "dative": "altīs", "accusative": "alta", "ablative": "altīs", "vocative": "alta"}
+        }
+    },
+    "longus": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "longus", "genitive": "longī", "dative": "longō", "accusative": "longum", "ablative": "longō", "vocative": "longe"},
+            "plural": {"nominative": "longī", "genitive": "longōrum", "dative": "longīs", "accusative": "longōs", "ablative": "longīs", "vocative": "longī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "longa", "genitive": "longae", "dative": "longae", "accusative": "longam", "ablative": "longā", "vocative": "longa"},
+            "plural": {"nominative": "longae", "genitive": "longārum", "dative": "longīs", "accusative": "longās", "ablative": "longīs", "vocative": "longae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "longum", "genitive": "longī", "dative": "longō", "accusative": "longum", "ablative": "longō", "vocative": "longum"},
+            "plural": {"nominative": "longa", "genitive": "longōrum", "dative": "longīs", "accusative": "longa", "ablative": "longīs", "vocative": "longa"}
+        }
+    },
+    "novus": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "novus", "genitive": "novī", "dative": "novō", "accusative": "novum", "ablative": "novō", "vocative": "nove"},
+            "plural": {"nominative": "novī", "genitive": "novōrum", "dative": "novīs", "accusative": "novōs", "ablative": "novīs", "vocative": "novī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "nova", "genitive": "novae", "dative": "novae", "accusative": "novam", "ablative": "novā", "vocative": "nova"},
+            "plural": {"nominative": "novae", "genitive": "novārum", "dative": "novīs", "accusative": "novās", "ablative": "novīs", "vocative": "novae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "novum", "genitive": "novī", "dative": "novō", "accusative": "novum", "ablative": "novō", "vocative": "novum"},
+            "plural": {"nominative": "nova", "genitive": "novōrum", "dative": "novīs", "accusative": "nova", "ablative": "novīs", "vocative": "nova"}
+        }
+    },
+
+    # --- GROUP 2: -ro stems (-er, -ra, -rum / -er, -era, -erum) (5 Adjectives) ---
     "pulcher": {
-        "type": "1st/2nd",
+        "type": "1st/2nd", "terminations": 3,
         "masculine": {
             "singular": {"nominative": "pulcher", "genitive": "pulchrī", "dative": "pulchrō", "accusative": "pulchrum", "ablative": "pulchrō", "vocative": "pulcher"},
             "plural": {"nominative": "pulchrī", "genitive": "pulchrōrum", "dative": "pulchrīs", "accusative": "pulchrōs", "ablative": "pulchrīs", "vocative": "pulchrī"}
@@ -662,10 +722,38 @@ adjectives_db = {
             "plural": {"nominative": "pulchra", "genitive": "pulchrōrum", "dative": "pulchrīs", "accusative": "pulchra", "ablative": "pulchrīs", "vocative": "pulchra"}
         }
     },
-    
-    # Ends in -er, keeps the 'e' (-er, -era, -erum)
+    "sacer": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "sacer", "genitive": "sacrī", "dative": "sacrō", "accusative": "sacrum", "ablative": "sacrō", "vocative": "sacer"},
+            "plural": {"nominative": "sacrī", "genitive": "sacrōrum", "dative": "sacrīs", "accusative": "sacrōs", "ablative": "sacrīs", "vocative": "sacrī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "sacra", "genitive": "sacrae", "dative": "sacrae", "accusative": "sacram", "ablative": "sacrā", "vocative": "sacra"},
+            "plural": {"nominative": "sacrae", "genitive": "sacrārum", "dative": "sacrīs", "accusative": "sacrās", "ablative": "sacrīs", "vocative": "sacrae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "sacrum", "genitive": "sacrī", "dative": "sacrō", "accusative": "sacrum", "ablative": "sacrō", "vocative": "sacrum"},
+            "plural": {"nominative": "sacra", "genitive": "sacrōrum", "dative": "sacrīs", "accusative": "sacra", "ablative": "sacrīs", "vocative": "sacra"}
+        }
+    },
+    "noster": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "noster", "genitive": "nostrī", "dative": "nostrō", "accusative": "nostrum", "ablative": "nostrō", "vocative": "noster"},
+            "plural": {"nominative": "nostrī", "genitive": "nostrōrum", "dative": "nostrīs", "accusative": "nostrōs", "ablative": "nostrīs", "vocative": "nostrī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "nostra", "genitive": "nostrae", "dative": "nostrae", "accusative": "nostram", "ablative": "nostrā", "vocative": "nostra"},
+            "plural": {"nominative": "nostrae", "genitive": "nostrārum", "dative": "nostrīs", "accusative": "nostrās", "ablative": "nostrīs", "vocative": "nostrae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "nostrum", "genitive": "nostrī", "dative": "nostrō", "accusative": "nostrum", "ablative": "nostrō", "vocative": "nostrum"},
+            "plural": {"nominative": "nostra", "genitive": "nostrōrum", "dative": "nostrīs", "accusative": "nostra", "ablative": "nostrīs", "vocative": "nostra"}
+        }
+    },
     "miser": {
-        "type": "1st/2nd",
+        "type": "1st/2nd", "terminations": 3,
         "masculine": {
             "singular": {"nominative": "miser", "genitive": "miserī", "dative": "miserō", "accusative": "miserum", "ablative": "miserō", "vocative": "miser"},
             "plural": {"nominative": "miserī", "genitive": "miserōrum", "dative": "miserīs", "accusative": "miserōs", "ablative": "miserīs", "vocative": "miserī"}
@@ -679,14 +767,106 @@ adjectives_db = {
             "plural": {"nominative": "misera", "genitive": "miserōrum", "dative": "miserīs", "accusative": "misera", "ablative": "miserīs", "vocative": "misera"}
         }
     },
+    "līber": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "līber", "genitive": "līberī", "dative": "līberō", "accusative": "līberum", "ablative": "līberō", "vocative": "līber"},
+            "plural": {"nominative": "līberī", "genitive": "līberōrum", "dative": "līberīs", "accusative": "līberōs", "ablative": "līberīs", "vocative": "līberī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "lībera", "genitive": "līberae", "dative": "līberae", "accusative": "līberam", "ablative": "līberā", "vocative": "lībera"},
+            "plural": {"nominative": "līberae", "genitive": "līberārum", "dative": "līberīs", "accusative": "līberās", "ablative": "līberīs", "vocative": "līberae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "līberum", "genitive": "līberī", "dative": "līberō", "accusative": "līberum", "ablative": "līberō", "vocative": "līberum"},
+            "plural": {"nominative": "lībera", "genitive": "līberōrum", "dative": "līberīs", "accusative": "lībera", "ablative": "līberīs", "vocative": "lībera"}
+        }
+    },
+
+    # --- GROUP 3: -ius stems (5 Adjectives) ---
+    "medius": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "medius", "genitive": "mediī", "dative": "mediō", "accusative": "medium", "ablative": "mediō", "vocative": "medie"},
+            "plural": {"nominative": "mediī", "genitive": "mediōrum", "dative": "mediīs", "accusative": "mediōs", "ablative": "mediīs", "vocative": "mediī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "media", "genitive": "mediae", "dative": "mediae", "accusative": "mediam", "ablative": "mediā", "vocative": "media"},
+            "plural": {"nominative": "mediae", "genitive": "mediārum", "dative": "mediīs", "accusative": "mediās", "ablative": "mediīs", "vocative": "mediae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "medium", "genitive": "mediī", "dative": "mediō", "accusative": "medium", "ablative": "mediō", "vocative": "medium"},
+            "plural": {"nominative": "media", "genitive": "mediōrum", "dative": "mediīs", "accusative": "media", "ablative": "mediīs", "vocative": "media"}
+        }
+    },
+    "ēgregius": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "ēgregius", "genitive": "ēgregiī", "dative": "ēgregiō", "accusative": "ēgregium", "ablative": "ēgregiō", "vocative": "ēgregie"},
+            "plural": {"nominative": "ēgregiī", "genitive": "ēgregiōrum", "dative": "ēgregiīs", "accusative": "ēgregiōs", "ablative": "ēgregiīs", "vocative": "ēgregiī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "ēgregia", "genitive": "ēgregiae", "dative": "ēgregiae", "accusative": "ēgregiam", "ablative": "ēgregiā", "vocative": "ēgregia"},
+            "plural": {"nominative": "ēgregiae", "genitive": "ēgregiārum", "dative": "ēgregiīs", "accusative": "ēgregiās", "ablative": "ēgregiīs", "vocative": "ēgregiae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "ēgregium", "genitive": "ēgregiī", "dative": "ēgregiō", "accusative": "ēgregium", "ablative": "ēgregiō", "vocative": "ēgregium"},
+            "plural": {"nominative": "ēgregia", "genitive": "ēgregiōrum", "dative": "ēgregiīs", "accusative": "ēgregia", "ablative": "ēgregiīs", "vocative": "ēgregia"}
+        }
+    },
+    "patrius": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "patrius", "genitive": "patriī", "dative": "patriō", "accusative": "patrium", "ablative": "patriō", "vocative": "patrie"},
+            "plural": {"nominative": "patriī", "genitive": "patriōrum", "dative": "patriīs", "accusative": "patriōs", "ablative": "patriīs", "vocative": "patriī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "patria", "genitive": "patriae", "dative": "patriae", "accusative": "patriam", "ablative": "patriā", "vocative": "patria"},
+            "plural": {"nominative": "patriae", "genitive": "patriārum", "dative": "patriīs", "accusative": "patriās", "ablative": "patriīs", "vocative": "patriae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "patrium", "genitive": "patriī", "dative": "patriō", "accusative": "patrium", "ablative": "patriō", "vocative": "patrium"},
+            "plural": {"nominative": "patria", "genitive": "patriōrum", "dative": "patriīs", "accusative": "patria", "ablative": "patriīs", "vocative": "patria"}
+        }
+    },
+    "dubius": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "dubius", "genitive": "dubiī", "dative": "dubiō", "accusative": "dubium", "ablative": "dubiō", "vocative": "dubie"},
+            "plural": {"nominative": "dubiī", "genitive": "dubiōrum", "dative": "dubiīs", "accusative": "dubiōs", "ablative": "dubiīs", "vocative": "dubiī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "dubia", "genitive": "dubiae", "dative": "dubiae", "accusative": "dubiam", "ablative": "dubiā", "vocative": "dubia"},
+            "plural": {"nominative": "dubiae", "genitive": "dubiārum", "dative": "dubiīs", "accusative": "dubiās", "ablative": "dubiīs", "vocative": "dubiae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "dubium", "genitive": "dubiī", "dative": "dubiō", "accusative": "dubium", "ablative": "dubiō", "vocative": "dubium"},
+            "plural": {"nominative": "dubia", "genitive": "dubiōrum", "dative": "dubiīs", "accusative": "dubia", "ablative": "dubiīs", "vocative": "dubia"}
+        }
+    },
+    "eximius": {
+        "type": "1st/2nd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "eximius", "genitive": "eximiī", "dative": "eximiō", "accusative": "eximium", "ablative": "eximiō", "vocative": "eximie"},
+            "plural": {"nominative": "eximiī", "genitive": "eximiōrum", "dative": "eximiīs", "accusative": "eximiōs", "ablative": "eximiīs", "vocative": "eximiī"}
+        },
+        "feminine": {
+            "singular": {"nominative": "eximia", "genitive": "eximiae", "dative": "eximiae", "accusative": "eximiam", "ablative": "eximiā", "vocative": "eximia"},
+            "plural": {"nominative": "eximiae", "genitive": "eximiārum", "dative": "eximiīs", "accusative": "eximiās", "ablative": "eximiīs", "vocative": "eximiae"}
+        },
+        "neuter": {
+            "singular": {"nominative": "eximium", "genitive": "eximiī", "dative": "eximiō", "accusative": "eximium", "ablative": "eximiō", "vocative": "eximium"},
+            "plural": {"nominative": "eximia", "genitive": "eximiōrum", "dative": "eximiīs", "accusative": "eximia", "ablative": "eximiīs", "vocative": "eximia"}
+        }
+    },
 
     # ==========================================
-    # --- 3RD DECLENSION ADJECTIVES (i-stems) ---
+    # --- 3RD DECLENSION ADJECTIVES (15) ---
     # ==========================================
     
-    # 3 Terminations (-er, -is, -e)
+    # --- GROUP 4: 3 Terminations (-er, -is, -e) (5 Adjectives) ---
     "ācer": {
-        "type": "3rd",
+        "type": "3rd", "terminations": 3,
         "masculine": {
             "singular": {"nominative": "ācer", "genitive": "ācris", "dative": "ācrī", "accusative": "ācrem", "ablative": "ācrī", "vocative": "ācer"},
             "plural": {"nominative": "ācrēs", "genitive": "ācrium", "dative": "ācribus", "accusative": "ācrēs", "ablative": "ācribus", "vocative": "ācrēs"}
@@ -700,10 +880,70 @@ adjectives_db = {
             "plural": {"nominative": "ācria", "genitive": "ācrium", "dative": "ācribus", "accusative": "ācria", "ablative": "ācribus", "vocative": "ācria"}
         }
     },
-    
-    # 2 Terminations (-is, -e)
+    "celer": {
+        "type": "3rd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "celer", "genitive": "celeris", "dative": "celerī", "accusative": "celerem", "ablative": "celerī", "vocative": "celer"},
+            "plural": {"nominative": "celerēs", "genitive": "celerium", "dative": "celeribus", "accusative": "celerēs", "ablative": "celeribus", "vocative": "celerēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "celeris", "genitive": "celeris", "dative": "celerī", "accusative": "celerem", "ablative": "celerī", "vocative": "celeris"},
+            "plural": {"nominative": "celerēs", "genitive": "celerium", "dative": "celeribus", "accusative": "celerēs", "ablative": "celeribus", "vocative": "celerēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "celere", "genitive": "celeris", "dative": "celerī", "accusative": "celere", "ablative": "celerī", "vocative": "celere"},
+            "plural": {"nominative": "celeria", "genitive": "celerium", "dative": "celeribus", "accusative": "celeria", "ablative": "celeribus", "vocative": "celeria"}
+        }
+    },
+    "celeber": {
+        "type": "3rd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "celeber", "genitive": "celebris", "dative": "celebrī", "accusative": "celebrem", "ablative": "celebrī", "vocative": "celeber"},
+            "plural": {"nominative": "celebrēs", "genitive": "celebrium", "dative": "celebribus", "accusative": "celebrēs", "ablative": "celebribus", "vocative": "celebrēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "celebris", "genitive": "celebris", "dative": "celebrī", "accusative": "celebrem", "ablative": "celebrī", "vocative": "celebris"},
+            "plural": {"nominative": "celebrēs", "genitive": "celebrium", "dative": "celebribus", "accusative": "celebrēs", "ablative": "celebribus", "vocative": "celebrēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "celebre", "genitive": "celebris", "dative": "celebrī", "accusative": "celebre", "ablative": "celebrī", "vocative": "celebre"},
+            "plural": {"nominative": "celebria", "genitive": "celebrium", "dative": "celebribus", "accusative": "celebria", "ablative": "celebribus", "vocative": "celebria"}
+        }
+    },
+    "salūber": {
+        "type": "3rd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "salūber", "genitive": "salūbris", "dative": "salūbrī", "accusative": "salūbrem", "ablative": "salūbrī", "vocative": "salūber"},
+            "plural": {"nominative": "salūbrēs", "genitive": "salūbrium", "dative": "salūbribus", "accusative": "salūbrēs", "ablative": "salūbribus", "vocative": "salūbrēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "salūbris", "genitive": "salūbris", "dative": "salūbrī", "accusative": "salūbrem", "ablative": "salūbrī", "vocative": "salūbris"},
+            "plural": {"nominative": "salūbrēs", "genitive": "salūbrium", "dative": "salūbribus", "accusative": "salūbrēs", "ablative": "salūbribus", "vocative": "salūbrēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "salūbre", "genitive": "salūbris", "dative": "salūbrī", "accusative": "salūbre", "ablative": "salūbrī", "vocative": "salūbre"},
+            "plural": {"nominative": "salūbria", "genitive": "salūbrium", "dative": "salūbribus", "accusative": "salūbria", "ablative": "salūbribus", "vocative": "salūbria"}
+        }
+    },
+    "equester": {
+        "type": "3rd", "terminations": 3,
+        "masculine": {
+            "singular": {"nominative": "equester", "genitive": "equestris", "dative": "equestrī", "accusative": "equestrem", "ablative": "equestrī", "vocative": "equester"},
+            "plural": {"nominative": "equestrēs", "genitive": "equestrium", "dative": "equestribus", "accusative": "equestrēs", "ablative": "equestribus", "vocative": "equestrēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "equestris", "genitive": "equestris", "dative": "equestrī", "accusative": "equestrem", "ablative": "equestrī", "vocative": "equestris"},
+            "plural": {"nominative": "equestrēs", "genitive": "equestrium", "dative": "equestribus", "accusative": "equestrēs", "ablative": "equestribus", "vocative": "equestrēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "equestre", "genitive": "equestris", "dative": "equestrī", "accusative": "equestre", "ablative": "equestrī", "vocative": "equestre"},
+            "plural": {"nominative": "equestria", "genitive": "equestrium", "dative": "equestribus", "accusative": "equestria", "ablative": "equestribus", "vocative": "equestria"}
+        }
+    },
+
+    # --- GROUP 5: 2 Terminations (-is, -e) (5 Adjectives) ---
     "fortis": {
-        "type": "3rd",
+        "type": "3rd", "terminations": 2,
         "masculine": {
             "singular": {"nominative": "fortis", "genitive": "fortis", "dative": "fortī", "accusative": "fortem", "ablative": "fortī", "vocative": "fortis"},
             "plural": {"nominative": "fortēs", "genitive": "fortium", "dative": "fortibus", "accusative": "fortēs", "ablative": "fortibus", "vocative": "fortēs"}
@@ -717,10 +957,70 @@ adjectives_db = {
             "plural": {"nominative": "fortia", "genitive": "fortium", "dative": "fortibus", "accusative": "fortia", "ablative": "fortibus", "vocative": "fortia"}
         }
     },
-    
-    # 1 Termination (e.g., -ns, -x)
+    "omnis": {
+        "type": "3rd", "terminations": 2,
+        "masculine": {
+            "singular": {"nominative": "omnis", "genitive": "omnis", "dative": "omnī", "accusative": "omnem", "ablative": "omnī", "vocative": "omnis"},
+            "plural": {"nominative": "omnēs", "genitive": "omnium", "dative": "omnibus", "accusative": "omnēs", "ablative": "omnibus", "vocative": "omnēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "omnis", "genitive": "omnis", "dative": "omnī", "accusative": "omnem", "ablative": "omnī", "vocative": "omnis"},
+            "plural": {"nominative": "omnēs", "genitive": "omnium", "dative": "omnibus", "accusative": "omnēs", "ablative": "omnibus", "vocative": "omnēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "omne", "genitive": "omnis", "dative": "omnī", "accusative": "omne", "ablative": "omnī", "vocative": "omne"},
+            "plural": {"nominative": "omnia", "genitive": "omnium", "dative": "omnibus", "accusative": "omnia", "ablative": "omnibus", "vocative": "omnia"}
+        }
+    },
+    "brevis": {
+        "type": "3rd", "terminations": 2,
+        "masculine": {
+            "singular": {"nominative": "brevis", "genitive": "brevis", "dative": "brevī", "accusative": "brevem", "ablative": "brevī", "vocative": "brevis"},
+            "plural": {"nominative": "brevēs", "genitive": "brevium", "dative": "brevibus", "accusative": "brevēs", "ablative": "brevibus", "vocative": "brevēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "brevis", "genitive": "brevis", "dative": "brevī", "accusative": "brevem", "ablative": "brevī", "vocative": "brevis"},
+            "plural": {"nominative": "brevēs", "genitive": "brevium", "dative": "brevibus", "accusative": "brevēs", "ablative": "brevibus", "vocative": "brevēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "breve", "genitive": "brevis", "dative": "brevī", "accusative": "breve", "ablative": "brevī", "vocative": "breve"},
+            "plural": {"nominative": "brevia", "genitive": "brevium", "dative": "brevibus", "accusative": "brevia", "ablative": "brevibus", "vocative": "brevia"}
+        }
+    },
+    "gravis": {
+        "type": "3rd", "terminations": 2,
+        "masculine": {
+            "singular": {"nominative": "gravis", "genitive": "gravis", "dative": "gravī", "accusative": "gravem", "ablative": "gravī", "vocative": "gravis"},
+            "plural": {"nominative": "gravēs", "genitive": "gravium", "dative": "gravibus", "accusative": "gravēs", "ablative": "gravibus", "vocative": "gravēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "gravis", "genitive": "gravis", "dative": "gravī", "accusative": "gravem", "ablative": "gravī", "vocative": "gravis"},
+            "plural": {"nominative": "gravēs", "genitive": "gravium", "dative": "gravibus", "accusative": "gravēs", "ablative": "gravibus", "vocative": "gravēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "grave", "genitive": "gravis", "dative": "gravī", "accusative": "grave", "ablative": "gravī", "vocative": "grave"},
+            "plural": {"nominative": "gravia", "genitive": "gravium", "dative": "gravibus", "accusative": "gravia", "ablative": "gravibus", "vocative": "gravia"}
+        }
+    },
+    "facilis": {
+        "type": "3rd", "terminations": 2,
+        "masculine": {
+            "singular": {"nominative": "facilis", "genitive": "facilis", "dative": "facilī", "accusative": "facilem", "ablative": "facilī", "vocative": "facilis"},
+            "plural": {"nominative": "facilēs", "genitive": "facilium", "dative": "facilibus", "accusative": "facilēs", "ablative": "facilibus", "vocative": "facilēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "facilis", "genitive": "facilis", "dative": "facilī", "accusative": "facilem", "ablative": "facilī", "vocative": "facilis"},
+            "plural": {"nominative": "facilēs", "genitive": "facilium", "dative": "facilibus", "accusative": "facilēs", "ablative": "facilibus", "vocative": "facilēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "facile", "genitive": "facilis", "dative": "facilī", "accusative": "facile", "ablative": "facilī", "vocative": "facile"},
+            "plural": {"nominative": "facilia", "genitive": "facilium", "dative": "facilibus", "accusative": "facilia", "ablative": "facilibus", "vocative": "facilia"}
+        }
+    },
+
+    # --- GROUP 6: 1 Termination (-ns, -x) (5 Adjectives) ---
     "ingēns": {
-        "type": "3rd",
+        "type": "3rd", "terminations": 1,
         "masculine": {
             "singular": {"nominative": "ingēns", "genitive": "ingentis", "dative": "ingentī", "accusative": "ingentem", "ablative": "ingentī", "vocative": "ingēns"},
             "plural": {"nominative": "ingentēs", "genitive": "ingentium", "dative": "ingentibus", "accusative": "ingentēs", "ablative": "ingentibus", "vocative": "ingentēs"}
@@ -732,6 +1032,66 @@ adjectives_db = {
         "neuter": {
             "singular": {"nominative": "ingēns", "genitive": "ingentis", "dative": "ingentī", "accusative": "ingēns", "ablative": "ingentī", "vocative": "ingēns"},
             "plural": {"nominative": "ingentia", "genitive": "ingentium", "dative": "ingentibus", "accusative": "ingentia", "ablative": "ingentibus", "vocative": "ingentia"}
+        }
+    },
+    "audāx": {
+        "type": "3rd", "terminations": 1,
+        "masculine": {
+            "singular": {"nominative": "audāx", "genitive": "audācis", "dative": "audācī", "accusative": "audācem", "ablative": "audācī", "vocative": "audāx"},
+            "plural": {"nominative": "audācēs", "genitive": "audācium", "dative": "audācibus", "accusative": "audācēs", "ablative": "audācibus", "vocative": "audācēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "audāx", "genitive": "audācis", "dative": "audācī", "accusative": "audācem", "ablative": "audācī", "vocative": "audāx"},
+            "plural": {"nominative": "audācēs", "genitive": "audācium", "dative": "audācibus", "accusative": "audācēs", "ablative": "audācibus", "vocative": "audācēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "audāx", "genitive": "audācis", "dative": "audācī", "accusative": "audāx", "ablative": "audācī", "vocative": "audāx"},
+            "plural": {"nominative": "audācia", "genitive": "audācium", "dative": "audācibus", "accusative": "audācia", "ablative": "audācibus", "vocative": "audācia"}
+        }
+    },
+    "fēlīx": {
+        "type": "3rd", "terminations": 1,
+        "masculine": {
+            "singular": {"nominative": "fēlīx", "genitive": "fēlīcis", "dative": "fēlīcī", "accusative": "fēlīcem", "ablative": "fēlīcī", "vocative": "fēlīx"},
+            "plural": {"nominative": "fēlīcēs", "genitive": "fēlīcium", "dative": "fēlīcibus", "accusative": "fēlīcēs", "ablative": "fēlīcibus", "vocative": "fēlīcēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "fēlīx", "genitive": "fēlīcis", "dative": "fēlīcī", "accusative": "fēlīcem", "ablative": "fēlīcī", "vocative": "fēlīx"},
+            "plural": {"nominative": "fēlīcēs", "genitive": "fēlīcium", "dative": "fēlīcibus", "accusative": "fēlīcēs", "ablative": "fēlīcibus", "vocative": "fēlīcēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "fēlīx", "genitive": "fēlīcis", "dative": "fēlīcī", "accusative": "fēlīx", "ablative": "fēlīcī", "vocative": "fēlīx"},
+            "plural": {"nominative": "fēlīcia", "genitive": "fēlīcium", "dative": "fēlīcibus", "accusative": "fēlīcia", "ablative": "fēlīcibus", "vocative": "fēlīcia"}
+        }
+    },
+    "prūdēns": {
+        "type": "3rd", "terminations": 1,
+        "masculine": {
+            "singular": {"nominative": "prūdēns", "genitive": "prūdentis", "dative": "prūdentī", "accusative": "prūdentem", "ablative": "prūdentī", "vocative": "prūdēns"},
+            "plural": {"nominative": "prūdentēs", "genitive": "prūdentium", "dative": "prūdentibus", "accusative": "prūdentēs", "ablative": "prūdentibus", "vocative": "prūdentēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "prūdēns", "genitive": "prūdentis", "dative": "prūdentī", "accusative": "prūdentem", "ablative": "prūdentī", "vocative": "prūdēns"},
+            "plural": {"nominative": "prūdentēs", "genitive": "prūdentium", "dative": "prūdentibus", "accusative": "prūdentēs", "ablative": "prūdentibus", "vocative": "prūdentēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "prūdēns", "genitive": "prūdentis", "dative": "prūdentī", "accusative": "prūdēns", "ablative": "prūdentī", "vocative": "prūdēns"},
+            "plural": {"nominative": "prūdentia", "genitive": "prūdentium", "dative": "prūdentibus", "accusative": "prūdentia", "ablative": "prūdentibus", "vocative": "prūdentia"}
+        }
+    },
+    "sapiēns": {
+        "type": "3rd", "terminations": 1,
+        "masculine": {
+            "singular": {"nominative": "sapiēns", "genitive": "sapientis", "dative": "sapientī", "accusative": "sapientem", "ablative": "sapientī", "vocative": "sapiēns"},
+            "plural": {"nominative": "sapientēs", "genitive": "sapientium", "dative": "sapientibus", "accusative": "sapientēs", "ablative": "sapientibus", "vocative": "sapientēs"}
+        },
+        "feminine": {
+            "singular": {"nominative": "sapiēns", "genitive": "sapientis", "dative": "sapientī", "accusative": "sapientem", "ablative": "sapientī", "vocative": "sapiēns"},
+            "plural": {"nominative": "sapientēs", "genitive": "sapientium", "dative": "sapientibus", "accusative": "sapientēs", "ablative": "sapientibus", "vocative": "sapientēs"}
+        },
+        "neuter": {
+            "singular": {"nominative": "sapiēns", "genitive": "sapientis", "dative": "sapientī", "accusative": "sapiēns", "ablative": "sapientī", "vocative": "sapiēns"},
+            "plural": {"nominative": "sapientia", "genitive": "sapientium", "dative": "sapientibus", "accusative": "sapientia", "ablative": "sapientibus", "vocative": "sapientia"}
         }
     }
 }
