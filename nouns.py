@@ -171,7 +171,7 @@ nouns_db = {
         "declension": "2nd", "gender": "Feminine",
         "singular": {"nominative": "cerasus", "genitive": "cerasī", "dative": "cerasō", "accusative": "cerasum", "ablative": "cerasō", "vocative": "cerase"},
         "plural": {"nominative": "cerasī", "genitive": "cerasōrum", "dative": "cerasīs", "accusative": "cerasōs", "ablative": "cerasīs", "vocative": "cerasī"}
-    }
+    },
     # 2nd Declension - Masculine (10)
     "servus": {
         "declension": "2nd", "gender": "Masculine",
