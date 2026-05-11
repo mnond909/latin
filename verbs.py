@@ -168,6 +168,7 @@ if "current_q" not in st.session_state:
 
     for verb_name in verbs_to_pull:
         verb_data = verbs_db[verb_name]
+        verb_group = verb_conjugations.get(verb_name, "Unknown") # Get the conjugation group
 
         # Process Indicatives
         if "indicative" in verb_data:
@@ -181,7 +182,8 @@ if "current_q" not in st.session_state:
                             questions.append({
                                 "prompt": f"{verb_name.upper()} — {voice.upper()} {tense.upper()} INDICATIVE — {person} {number}",
                                 "answer": form,
-                                "translation": translation
+                                "translation": translation,
+                                "conjugation": verb_group
                             })
 
         # Process Imperatives
@@ -196,7 +198,8 @@ if "current_q" not in st.session_state:
                             questions.append({
                                 "prompt": f"{verb_name.upper()} — {voice.upper()} {tense.upper()} IMPERATIVE — {person} {number}",
                                 "answer": form,
-                                "translation": translation
+                                "translation": translation,
+                                "conjugation": verb_group
                             })
 
         # Process Infinitives
@@ -208,7 +211,8 @@ if "current_q" not in st.session_state:
                 questions.append({
                     "prompt": f"{verb_name.upper()} — {inf_type.upper()} INFINITIVE",
                     "answer": form,
-                    "translation": translation
+                    "translation": translation,
+                    "conjugation": verb_group
                 })
 
     if questions:
@@ -217,7 +221,9 @@ if "current_q" not in st.session_state:
 # --- DISPLAY & FORM ---
 if "current_q" in st.session_state:
     q = st.session_state.current_q
-    st.info(f"How do you say: **{q['prompt']}**?")
+    
+    # Display the prompt with the conjugation group included
+    st.info(f"How do you say: **{q['prompt']}**? \n\n*(Conjugation: {q['conjugation']})*")
 
     with st.form(key='quiz_form', clear_on_submit=True):
         user_input = st.text_input("Your Answer:")
