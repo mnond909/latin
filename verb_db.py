@@ -20,7 +20,7 @@ verb_conjugations = {
 }
 
 # === 2. PASTE YOUR ENTIRE verbs_db DICTIONARY HERE ===
- verbs_db = {
+verbs_db = {
 
     # === 1ST CONJUGATION ===
 
